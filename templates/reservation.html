@@ -1,10 +1,15 @@
-<script src="../script/reservation.js" type="text/javascript"></script> 
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>Kidibus</title>
     <link rel="stylesheet" href="../ressources/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../scripts/reservation.js" type="text/javascript"></script> 
 </head>
 
 <body>
@@ -24,23 +29,30 @@
 </header>
 
 <h1>Reserver un Trajet</h1>
+<div class="d-flex justify-content-center">
+<span class="border border-primary">
+    <div class="card">
+        <div class="card-body">
 
-<label> Veuillez selectionner un trajet parmis les trajets existants :</label>
+        <h5>Veuillez selectionner un trajet parmis les trajets existants :</h5>
 <br>
-<select name="trajets" id="trajets" class="ripple">
+<div class="select">
+<select name="trajets" id="trajets"  class="select-text" required>
+    <option value="0" selected>Aucun</option>
     <option value="1">Trajet Cannes-Nice</option>
-    <option value="2">Trajet Nice-Antibes</option>
-    <option value="3">Trajet Gare Routière Sophia Antipolis-Gare Routière Sophia Antipolis</option>
+    <option value="2">Trajet Nice-Cannes</option>
+    <option value="3">Trajet Nice-Antibes</option>
+    <option value="4">Trajet Antibes-Nice</option>
 </select>
-<br>
-<button class="ripple">Confirmer</button>
+<div>
 
 <br>
 <br>
-<label> Selectionner un arrêt : </label>
+<label> Selectionner un arrêt de départ: </label>
 <br>
     <div class="select">
-<select class="select-text" required>
+<select name="arrets" id="arrets" class="select-text" required>
+    <option selected>Aucun</option>
     <option>Arret St-Jean</option>
     <option>Arret Les Moulins</option>
     <option>Arret Place du Cap</option>
@@ -50,21 +62,21 @@
     <option>Arret Hello World</option>
     <option>Arret Place de sa Majesté Delmare</option>
     <option>Arret Les Genets</option>
+    <option>Arret Collège St Joseph</option>
 </select>
 </div>
 <br>
-<button class="ripple">Confirmer</button>
-
 <br>
-<br>
-
 <label> Selectionner la date du trajet : </label>
-<input type="date"/>
+<input type="date" name="date" id="date"/>
 <br>
 <br>
 
 
-<button class="ripple">Confirmer la réservation</button>
-
+<input type="submit" value="Confirmer la réservation" class="btn btn-primary" name="submit" id="submit">
+</div>
+</div>
+        </div>
+</span>
 </body>
 </html>

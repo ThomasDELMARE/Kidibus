@@ -1,0 +1,70 @@
+<script src="../script/reservation.js" type="text/javascript"></script> 
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kidibus</title>
+    <link rel="stylesheet" href="../ressources/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <ul class="horizontal">
+        <li>
+            <a class="imageItem" href="../index.html">
+                <img src="../ressources/img/kidibuslogo.png" />
+            </a>
+        </li>
+        <li><a class="listItemRight" href="../templates/contact.html">Nous contacter</a></li>
+        <li><a class="listItemRight" href="../templates/partenaires.html">Partenaires</a></li>
+        <li><a class="listItemRight" href="../templates/localisation.html">Localiser</a></li>
+        <li><a class="listItemRight" href="../templates/reservation.html">Réserver un trajet</a></li>
+    </ul>
+</header>
+
+<h1>Reserver un Trajet</h1>
+
+<label> Veuillez selectionner un trajet parmis les trajets existants :</label>
+<br>
+<select name="trajets" id="trajets" class="ripple">
+    <option value="1">Trajet Cannes-Nice</option>
+    <option value="2">Trajet Nice-Antibes</option>
+    <option value="3">Trajet Gare Routière Sophia Antipolis-Gare Routière Sophia Antipolis</option>
+</select>
+<br>
+<button class="ripple">Confirmer</button>
+
+<br>
+<br>
+<label> Selectionner un arrêt : </label>
+<br>
+    <div class="select">
+<select class="select-text" required>
+    <option>Arret St-Jean</option>
+    <option>Arret Les Moulins</option>
+    <option>Arret Place du Cap</option>
+    <option>Arret St-Roch</option>
+    <option>Arret Lycée Louis-Jean Le Valois</option>
+    <option>Arret Les Vallets</option>
+    <option>Arret Hello World</option>
+    <option>Arret Place de sa Majesté Delmare</option>
+    <option>Arret Les Genets</option>
+</select>
+</div>
+<br>
+<button class="ripple">Confirmer</button>
+
+<br>
+<br>
+
+<label> Selectionner la date du trajet : </label>
+<input type="date"/>
+<br>
+<br>
+
+
+<button class="ripple">Confirmer la réservation</button>
+
+</body>
+</html>

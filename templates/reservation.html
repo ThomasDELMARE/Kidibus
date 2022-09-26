@@ -27,17 +27,21 @@
         <li><a class="listItemRight" href="../templates/reservation.html">Réserver un trajet</a></li>
     </ul>
 </header>
+&nbsp;
+<br>
+<h1 style="text-align: center;">Reserver un Trajet</h1>
+<br>
 
-<h1>Reserver un Trajet</h1>
+<br>
 <div class="d-flex justify-content-center">
 <span class="border border-primary">
     <div class="card">
-        <div class="card-body">
+        <div class="card-body" style="font-size: 200%;">
 
-        <h5>Veuillez selectionner un trajet parmis les trajets existants :</h5>
+        <label>Veuillez selectionner un trajet parmis les trajets existants :</label>
 <br>
 <div class="select">
-<select name="trajets" id="trajets"  class="select-text" required>
+<select name="trajets" id="trajets"  class="form-select form-select-lg mb-3" style="width: 200%; font-size: 100%;" required>
     <option value="0" selected>Aucun</option>
     <option value="1">Trajet Cannes-Nice</option>
     <option value="2">Trajet Nice-Cannes</option>
@@ -47,11 +51,10 @@
 <div>
 
 <br>
-<br>
 <label> Selectionner un arrêt de départ: </label>
 <br>
     <div class="select">
-<select name="arrets" id="arrets" class="select-text" required>
+<select name="arrets" id="arrets" class="form-select form-select-lg mb-3" style="width: 200%; font-size: 100%;" required>
     <option selected>Aucun</option>
     <option>Arret St-Jean</option>
     <option>Arret Les Moulins</option>
@@ -65,7 +68,7 @@
     <option>Arret Collège St Joseph</option>
 </select>
 </div>
-<br>
+
 <br>
 <label> Selectionner la date du trajet : </label>
 <input type="date" name="date" id="date"/>
@@ -73,10 +76,10 @@
 <br>
 
 
-<input type="submit" value="Confirmer la réservation" class="btn btn-primary" name="submit" id="submit">
+<input type="submit" value="Confirmer la réservation" class="btn btn-primary" name="submit" id="submit" style="width: 200%; font-size: 100%;">
 </div>
 </div>
-        </div>
 </span>
+</div>
 </body>
 </html>

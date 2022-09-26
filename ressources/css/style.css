@@ -132,9 +132,9 @@ button {
     position: relative;
     font-family: inherit;
     background-color: transparent;
-    width: 350px;
+    width: 200%;
     padding: 10px 10px 10px 0;
-    font-size: 18px;
+    font-size: 100%;
     border-radius: 0;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);

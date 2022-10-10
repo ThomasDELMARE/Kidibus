@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head></head>
+    <!-- Script nécessaires -->
+    <script type="application/javascript" src="../scripts/contact.js"></script>
+</head>
 
 <header>
     <ul class="horizontal">
@@ -35,35 +37,35 @@
                         <div id="form-message-success" class="mb-4" style="display:none">
                             Ton message a été envoyé, merci !
                         </div>
-                        <form method="POST" id="contactForm" name="contactForm" novalidate="novalidate">
+                        <form id="contactForm" name="contactForm" onsubmit="return sendMail()">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="name" id="name"
+                                        <input type="text" class="form-control" id="name"
                                             placeholder="Nom" style="margin-bottom: 10px;">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" id="email"
+                                        <input type="email" class="form-control" id="email"
                                             placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="subject" id="subject"
+                                        <input type="text" class="form-control" id="subject"
                                             placeholder="Sujet" style="margin-bottom: 10px;">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="7"
+                                        <textarea class="form-control" id="message" cols="30" rows="7"
                                             placeholder="Message" style="margin-bottom: 10px;"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="submit" value="Envoyer le message" class="btn btn-primary">
+                                        <button class="btn btn-primary"> Envoyer le message </button>
                                         <div class="submitting"></div>
                                     </div>
                                 </div>

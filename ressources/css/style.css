@@ -48,11 +48,29 @@ body.background {
 }
 
 img.imageAccueil {
-    width: 1500px;
-    height: 750px;
+    width: 1000px;
+    height: 500px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+img.imageZou {
+    width: 250px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+img.imageEnvibus {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+img.imageMairie {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 20px;
 }
 
 h2.titreImageAccueil {

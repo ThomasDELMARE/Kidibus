@@ -1,6 +1,6 @@
 # Kidibus
 
-Groupe 3 composé de : 
+Groupe 5 composé de : 
 - Wen-Miin CHENG
 - Thomas DELMARE
 - Hasnaa ELALAOUI

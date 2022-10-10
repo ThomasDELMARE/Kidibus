@@ -59,18 +59,21 @@ img.imageZou {
     width: 250px;
     height: 100px;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 img.imageEnvibus {
     width: 200px;
     height: 150px;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 img.imageMairie {
     width: 250px;
     height: 150px;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 h2.titreImageAccueil {
@@ -165,8 +168,6 @@ button {
     outline: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-
-
 
 
 /* LABEL ======================================= */

@@ -7,10 +7,18 @@ var displayedConducteur = false;
 var displayedAccompagnateur = false;
 window.onload = (event) =>{
 
+    var trajet = localStorage.getItem("trajet");
+    var arret = localStorage.getItem("arret");
+
+    console.log(trajet);
+    console.log(arret);
+
     setTimeout("cacheImage()",3000);
     this.openCloseForm();
     this.openCloseConducteur();
     this.openCloseAccompagnateur();
+
+    document.getElementById("theDiv").textContent = 'Votre arret de départ : ' + arret;
 
 };
 

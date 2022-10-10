@@ -29,56 +29,29 @@
 </header>
 &nbsp;
 <br>
-<h1 style="text-align: center;">Reserver votre trajet</h1>
+<h1 style="text-align: center;">Réserver votre trajet</h1>
 <br>
 
 <br>
 <div class="d-flex justify-content-center">
-<span class="border border-primary" style="width: 800;">
-    <div class="card">
-        <div class="card-body" style="font-size: 200%; width: 800;">
+    <span class="border border-primary" style="width: 800;">
+        <div class="card">
+            <div class="card-body" style="font-size: 200%; width: 800;">
 
-        <label>Veuillez selectionner un trajet :</label>
+        <label>Veuillez selectionner l'heure de départ de votre trajet :</label>
 <br>
-<div class="select">
-<select name="trajets" id="trajets"  class="form-select form-select-lg mb-3" style="width: 200%; font-size: 100%;" required>
-    <option value="0" selected>Aucun</option>
-    <option value="1">Trajet Cannes-Nice</option>
-    <option value="2">Trajet Nice-Cannes</option>
-    <option value="3">Trajet Nice-Antibes</option>
-    <option value="4">Trajet Antibes-Nice</option>
-</select>
-<div>
-
-<br>
-<label> Selectionner un arrêt de départ: </label>
-<br>
-    <div class="select">
-<select name="arrets" id="arrets" class="form-select form-select-lg mb-3" style="width: 200%; font-size: 100%;" required>
-    <option selected>Aucun</option>
-    <option>Arret St-Jean</option>
-    <option>Arret Les Moulins</option>
-    <option>Arret Place du Cap</option>
-    <option>Arret St-Roch</option>
-    <option>Arret Lycée Louis-Jean Le Valois</option>
-    <option>Arret Les Vallets</option>
-    <option>Arret Hello World</option>
-    <option>Arret Place de sa Majesté Delmare</option>
-    <option>Arret Les Genets</option>
-    <option>Arret Collège St Joseph</option>
-</select>
-</div>
-
-<br>
-<label> Selectionner la date du trajet : </label>
-<input type="date" name="date" id="date" class="form-select form-select-lg mb-3" style="width: 200%; font-size: 100%;"/>
-<br>
-<br>
-
+<input type="radio" value="6:50" checked> 6:50<br>
+             <input type="radio" value="7:00"> 7:00<br>
+             <input type="radio" value="7:15"> 7:15<br>
+             <input type="radio" value="7:30"> 7:30<br>
+             <input type="radio" value="7:45"> 7:45<br>
+             <input type="radio" value="8:00"> 8:00<br>
+<p></p>
 <div class="d-flex justify-content-center">
-    <form action="./reservation2.html">
-        <input type="submit" class="btn btn-primary" value="Etape suivante" name="submit" id="submit" style="width: 200%; font-size: 100%;"/>
-        </form>
+   
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="width: 200%; font-size: 100%;">
+    Confirmer la réservation
+  </button>
 </div>
 </div>
 </div>
@@ -86,3 +59,19 @@
 </div>
 </body>
 </html>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="font-size: 200%;">
+            Réservation du trajet Kidibus confirmée !
+        </div>
+        <div class="modal-footer">
+            <a href="./localisation.html"><button type="button" class="btn btn-primary">OK !</button></a>
+        </div>
+      </div>
+    </div>
+  </div>

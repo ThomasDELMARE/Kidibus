@@ -1,98 +1,61 @@
 // Initialisation des variables
 // cf https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/spline-irregular-time/
 
+var arretTrajet = localStorage.getItem("trajetArrets");
+
+
 var which_esps = [];
 var refreshInterval = 300000;
 var currentIntervalId = 0;
 const markers = [{
-        name: 'Canada',
-        url: 'https://en.wikipedia.org/wiki/Canada',
-        lat: 56.130366,
-        lon: -106.346771,
+        name: arretTrajet[0].name,
+        lat: arretTrajet[0].lat,
+        lon: arretTrajet[0].lon,
     },
     {
-        name: 'Anguilla',
-        url: 'https://en.wikipedia.org/wiki/Anguilla',
-        lat: 18.220554,
-        lon: -63.068615,
+        name: arretTrajet[1].name,
+        lat: arretTrajet[1].lat,
+        lon: arretTrajet[1].lon,
     },
     {
-        name: 'Barbados',
-        url: 'https://en.wikipedia.org/wiki/Barbados',
-        lat: 13.193887,
-        lon: -59.543198,
+        name: arretTrajet[2].name,
+        lat: arretTrajet[2].lat,
+        lon: arretTrajet[2].lon,
     },
     {
-        name: 'United States',
-        url: 'https://en.wikipedia.org/wiki/United_States',
-        lat: 37.09024,
-        lon: -95.712891,
+        name: arretTrajet[3].name,
+        lat: arretTrajet[3].lat,
+        lon: arretTrajet[3].lon,
     },
     {
-        name: 'Ireland',
-        url: 'https://en.wikipedia.org/wiki/Ireland',
-        lat: 53.41291,
-        lon: -8.24389,
+        name: arretTrajet[4].name,
+        lat: arretTrajet[4].lat,
+        lon: arretTrajet[4].lon,
     },
     {
-        name: 'Scotland',
-        url: 'https://en.wikipedia.org/wiki/Scotland',
-        lat: 56.490671,
-        lon: -4.202646,
+        name: arretTrajet[5].name,
+        lat: arretTrajet[5].lat,
+        lon: arretTrajet[5].lon,
     },
     {
-        name: 'England',
-        url: 'https://en.wikipedia.org/wiki/England',
-        lat: 52.355518,
-        lon: -1.17432,
+        name: arretTrajet[6].name,
+        lat: arretTrajet[6].lat,
+        lon: arretTrajet[6].lon,
     },
     {
-        name: 'France',
-        url: 'https://en.wikipedia.org/wiki/France',
-        lat: 46.227638,
-        lon: 2.213749,
+        name: arretTrajet[7].name,
+        lat: arretTrajet[7].lat,
+        lon: arretTrajet[7].lon,
     },
     {
-        name: 'The Netherlands',
-        url: 'https://en.wikipedia.org/wiki/The_Netherlands',
-        lat: 52.132633,
-        lon: 5.291266,
+        name: arretTrajet[8].name,
+        lat: arretTrajet[8].lat,
+        lon: arretTrajet[8].lon,
     },
     {
-        name: 'Switzerland',
-        url: 'https://en.wikipedia.org/wiki/Switzerland',
-        lat: 46.818188,
-        lon: 8.227512,
-    },
-    {
-        name: 'South Africa',
-        url: 'https://en.wikipedia.org/wiki/South_Africa',
-        lat: -30.559482,
-        lon: 22.937506,
-    },
-    {
-        name: 'Madagascar',
-        url: 'https://en.wikipedia.org/wiki/Madagascar',
-        lat: -18.766947,
-        lon: 46.869107,
-    },
-    {
-        name: 'Taiwan',
-        url: 'https://en.wikipedia.org/wiki/Taiwan',
-        lat: 23.69781,
-        lon: 120.960515,
-    },
-    {
-        name: 'Japan',
-        url: 'https://en.wikipedia.org/wiki/Japan',
-        lat: 36.204824,
-        lon: 138.252924,
-    },
-    {
-        name: 'Argentina',
-        url: 'https://en.wikipedia.org/wiki/Argentina',
-        lat: -38.416096,
-        lon: -63.616673,
+        name: arretTrajet[9].name,
+        lat: arretTrajet[9].lat,
+        lon: arretTrajet[9].lon,
     },
 ];
 const espWeathers = [];
@@ -253,6 +216,7 @@ async function apiCalls(markers) {
     return Promise.all(promises)
 }
 
+/*
 // Permet de traiter les données renvoyées par l'API
 async function apiCall(url) {
     // console.log("in apiCall")
@@ -276,6 +240,7 @@ async function apiCall(url) {
             }).catch(() => resolve(false));
     });
 }
+*/
 
 // Permet d'ajouter le marqueur
 function computeWeather(markers) {
@@ -306,4 +271,8 @@ function displayMarkers(markers, defaultIcon = false) {
 // Fonction main
 function main() {
     computeWeather(markers);
+
+    console.log("Les arrets du trajet");
+    console.log(arretTrajet);
+
 }

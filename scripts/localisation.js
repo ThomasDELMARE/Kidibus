@@ -7,8 +7,8 @@ var displayedConducteur = false;
 var displayedAccompagnateur = false;
 window.onload = (event) =>{
 
-    var trajet = localStorage.getItem("trajet");
-    var arret = localStorage.getItem("arret");
+    var trajet = localStorage.getItem("trajetName");
+    var arret = localStorage.getItem("arretName");
 
     console.log(trajet);
     console.log(arret);
@@ -18,7 +18,8 @@ window.onload = (event) =>{
     this.openCloseConducteur();
     this.openCloseAccompagnateur();
 
-    document.getElementById("theDiv").textContent = 'Votre arret de départ : ' + arret;
+    document.getElementById("trajet").textContent = trajet;
+    document.getElementById("arretDepart").textContent = 'Votre arret de départ : ' + arret;
 
 };
 

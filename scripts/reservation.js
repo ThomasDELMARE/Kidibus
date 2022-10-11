@@ -116,7 +116,7 @@ var trajet4 = {name: 'Trajet Antibes-Nice', arrets: [this.arrets2[7], this.arret
 window.onload = (event) =>{
 
     console.log(trajet1);
-    console.log(trajet3);
+    console.log(this.arrets2[1].name);
 
 };
 
@@ -159,27 +159,21 @@ onSuivant = function () {
     this.setTrajetSelected(document.getElementById("type").value);
     this.setArretSelected(document.getElementById("size").value);
 
-    var myVar = eval("this."+this.getTrajetSelected());
+    var trajet = eval("this."+this.getTrajetSelected());
+    var arret = eval(this.getArretSelected());
 
-    if(myVar == this.trajet1) {
-        localStorage.setItem("trajet", myVar.name);
-        localStorage.setItem("arret", this.getArretSelected());
-    }
-    else if(myVar == this.trajet2) {
-        localStorage.setItem("trajet", myVar.name);
-        localStorage.setItem("arret", this.getArretSelected());
-    }
-    else if(myVar == this.trajet3) {
-        localStorage.setItem("trajet", myVar.name);
-        localStorage.setItem("arret", this.getArretSelected());
-    }
-    else if(myVar == this.trajet4) {
-        localStorage.setItem("trajet", myVar.name);
-        localStorage.setItem("arret", this.getArretSelected());
+    if(trajet == this.trajet1 || trajet == this.trajet2 || trajet == this.trajet3 ||trajet==this.trajet4) {
+        localStorage.setItem("trajetName", trajet.name);
+        localStorage.setItem("trajetArrets", trajet.arrets);
+
+        localStorage.setItem("arretId", arret.id);
+        localStorage.setItem("arretName", arret.name);
+        localStorage.setItem("arretLat", arret.lat);
+        localStorage.setItem("arretLon", arret.lon);
     }
     else {
-        localStorage.setItem("trajet", "Non Defini");
-        localStorage.setItem("arret", "Non Defini");
+        localStorage.setItem("trajetName", "Non Defini");
+        localStorage.setItem("arretName", "Non Defini");
     }
 
 }

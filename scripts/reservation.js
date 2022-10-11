@@ -1,61 +1,62 @@
 var arrets1 = [{
     id: 11,
     name: 'Arret Ecole du Palais',
-    lat: 56.130366,
-    lon: -106.346771,
+    lat: 43.552488266829435,
+    lon: 7.019085972065295,
 },
 {
     id: 12,
     name: 'Arret Les Moulins',
-    lat: 56.130366,
-    lon: -106.346771,
+    lat: 43.54751274553529,
+    lon: 7.046678716872739,
 },
 {
     id: 13,
     name: 'Arret Place du Cap',
-    lat: 56.130366,
-    lon: -106.346771,
+    lat: 43.556542431715776,
+    lon: 7.061894591379368,
+
 },
 {
     id: 14,
     name: 'Arret St-Roch',
-    lat: 56.130366,
-    lon: -106.346771,
+    lat: 43.57893161120104,
+    lon: 7.119915615705617,
 },
 {
     id: 15,
     name: 'Arret Lycée Louis-Jean Le Valois',
-    lat: 18.220554,
-    lon: -63.068615,
+    lat: 43.59987418348411,
+    lon: 7.121169804167541,
 },{
     id: 16,
     name: 'Arret Les Vallets',
-    lat: 56.130366,
-    lon: -106.346771,
+    lat: 43.639434329156934,
+    lon: 7.133533079666557,
 },
 {
     id: 17,
     name: 'Arret Hello World',
-    lat: 56.130366,
-    lon: -106.346771,
+    lat: 43.659618448093205,
+    lon: 7.166234571118227,
 },
 {
     id: 18,
     name: 'Arret Place de sa Majesté Delmare',
-    lat: 56.130366,
-    lon: -106.346771,
+    lat: 43.666883070443305,
+    lon: 7.192498762829379,
 },
 {
     id: 19,
     name: 'Arret Les Genets',
-    lat: 56.130366,
-    lon: -106.346771,
+    lat: 43.69415149338836,
+    lon: 7.251261562668649,
 },
 {
     id: 20,
     name: 'Arret Collège St Joseph',
-    lat: 18.220554,
-    lon: -63.068615,
+    lat: 43.71647397575789,
+    lon: 7.2614301379534405,
 }];
 
 
@@ -163,8 +164,23 @@ onSuivant = function () {
     var arret = eval(this.getArretSelected());
 
     if(trajet == this.trajet1 || trajet == this.trajet2 || trajet == this.trajet3 ||trajet==this.trajet4) {
+        
+        var trajetArretsIds = [trajet.arrets.length];
+        var trajetArretsNames = [trajet.arrets.length];
+        var trajetArretsLat = [trajet.arrets.length];
+        var trajetArretsLon = [trajet.arrets.length];
+
+        for (var i = 0; i < trajet.arrets.length; i++) {
+            trajetArretsIds[i] = trajet.arrets[i].id;
+            trajetArretsNames[i] = trajet.arrets[i].name;
+            trajetArretsLat[i] = trajet.arrets[i].lat;
+            trajetArretsLon[i] = trajet.arrets[i].lon;
+        }
         localStorage.setItem("trajetName", trajet.name);
-        localStorage.setItem("trajetArrets", trajet.arrets);
+        localStorage.setItem("trajetArretsIds", JSON.stringify(trajetArretsIds));
+        localStorage.setItem("trajetArretsNames", JSON.stringify(trajetArretsNames));
+        localStorage.setItem("trajetArretsLat", JSON.stringify(trajetArretsLat));
+        localStorage.setItem("trajetArretsLon", JSON.stringify(trajetArretsLon));
 
         localStorage.setItem("arretId", arret.id);
         localStorage.setItem("arretName", arret.name);

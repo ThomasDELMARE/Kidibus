@@ -1,5 +1,15 @@
+function cacheElements() {
+    document.getElementById('headerDiv').style.display='none';
+    document.getElementById('bodyDiv').style.display='none';
+    document.getElementById('footerDiv').style.display='none';
+}
+
 function cacheImage() {
 document.getElementById('idImage').style.display='none';
+
+document.getElementById('headerDiv').style.display='block';
+document.getElementById('bodyDiv').style.display='block';
+document.getElementById('footerDiv').style.display='block';
 }
 
 var displayed = false;
@@ -9,18 +19,24 @@ window.onload = (event) =>{
 
     var trajet = localStorage.getItem("trajetName");
     var arret = localStorage.getItem("arretName");
+    var lastArretName = localStorage.getItem("lastArretName");
+    var dateTrajet = localStorage.getItem("dateTrajet");
+    var heureTrajet = localStorage.getItem("heureTrajet");
 
     console.log(trajet);
     console.log(arret);
 
-    setTimeout("cacheImage()",3000);
+    cacheElements();
+    setTimeout("cacheImage()",3500);
     this.openCloseForm();
     this.openCloseConducteur();
     this.openCloseAccompagnateur();
 
     document.getElementById("trajet").textContent = trajet;
     document.getElementById("arretDepart").textContent = 'Votre arret de départ : ' + arret;
-
+    document.getElementById("lastArretName").textContent = lastArretName;
+    document.getElementById("dateTrajet").textContent = "Date du départ: Le " + dateTrajet;
+    document.getElementById("heureTrajet").textContent = "à " + heureTrajet;
 };
 
 function openCloseForm() {

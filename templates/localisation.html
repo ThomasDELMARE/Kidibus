@@ -42,7 +42,7 @@
     <h1 class="mb-4">Information du trajet</h1>
 </div>
 
-    <div class="container">
+    <div class="container" id="headerDiv">
         <br>
         <div class="row">
             <div class="col-2">
@@ -61,6 +61,9 @@
     </div>
     
 
+    <div class="d-flex justify-content-center" id="dateTrajet" style="font-size: 20px;"></div>
+    <div class="d-flex justify-content-center" id="heureTrajet" style="font-size: 20px;"></div>
+    
     <br>
     <div class="d-flex justify-content-center" id="arretDepart" style="font-size: 25px;">
     </div>
@@ -72,7 +75,7 @@
     <h1>
         <img id="idImage" class="runningBus" src="../ressources/img/runningBus.gif" />
     </h1>
-    
+    <div id="bodyDiv">
                 <div id="map" style="width: 100%; height: 500px; border: 1px solid #AAA; padding: 6px 12px;"></div>
         <div class="row align-items-center" style="margin-top:50px;">
 
@@ -83,6 +86,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Needed scripts -->
     <script type='text/javascript' src='../scripts/maps/map.js'></script>
@@ -94,6 +98,7 @@
 <footer style="background-color: rgba(0, 74, 173, 255);">
     <br>
 
+    <div id="footerDiv">
     <div class="container">
         <div class="row">
             <div class="col-2">
@@ -111,7 +116,7 @@
                        <div class="form-popup" id="popupForm">                                                                                     
                            <div>                                                 
                                <div> Numéro du bus : Bus N°4323 </div>                                                 
-                               <div> Dernier arrêt deservit par le bus : </div>
+                               <div> Dernier arrêt deservit par le bus : <h6 id="lastArretName"></h6></div>
                                <br>                                                                                
                            </div>                                         
                        </div>                                       
@@ -178,7 +183,39 @@
             </div>
         </div>
       </div>
-      <br>
+    </div>
+      <button type="button" class="hide" data-toggle="modal" data-target="#modalDepart">
+      </button>
+      <button type="button" class="hide" data-toggle="modal" data-target="#modalArrivee">
+    </button>
 </footer>
+
+<!-- Modal Depart -->
+<div class="modal fade" id="modalDepart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="font-size: 200%;">
+            Votre enfant a été pris en charge par le bus.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="hideModalDepart()">OK !</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Arrivee -->
+<div class="modal fade" id="modalArrivee" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="font-size: 200%;">
+            Votre enfant est arrivé à desination !
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="hideModalArrivee()">OK !</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </html>

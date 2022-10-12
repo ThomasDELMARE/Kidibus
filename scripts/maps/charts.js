@@ -66,10 +66,20 @@ const myURL = jQuery('script[src$="charts.js"]')
     .replace('charts.js', '');
 // Icônes récupérées sur leaflet pour faire la différenciation
 const myIcon = L.icon({
-    iconUrl: "https://cdn-icons-png.flaticon.com/512/149/149059.png",
-    iconRetinaUrl: "https://cdn-icons-png.flaticon.com/512/149/149059.png",
-    iconSize: [29, 24],
-    iconAnchor: [9, 21],
+    //https://cdn-icons-png.flaticon.com/512/3471/3471521.png
+    iconUrl: "https://cdn-icons-png.flaticon.com/512/1916/1916790.png",
+    iconRetinaUrl: "https://cdn-icons-png.flaticon.com/512/1916/1916790.png",
+    iconSize: [50, 50],
+    iconAnchor: [19, 31],
+    popupAnchor: [0, -14],
+})
+
+const iconBus = L.icon({
+    //https://cdn-icons-png.flaticon.com/512/3471/3471521.png
+    iconUrl: "https://cdn-icons-png.flaticon.com/512/3471/3471521.png",
+    iconRetinaUrl: "https://cdn-icons-png.flaticon.com/512/3471/3471521.png",
+    iconSize: [50, 50],
+    iconAnchor: [19, 31],
     popupAnchor: [0, -14],
 })
 

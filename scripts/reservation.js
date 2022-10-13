@@ -126,12 +126,6 @@ var trajet2 = {name: 'Trajet Nice-Cannes', arrets: [this.arrets1[9], this.arrets
 var trajet3 = {name: 'Trajet Nice-Antibes', arrets: [this.arrets2[0], this.arrets2[1], this.arrets2[2], this.arrets2[3], this.arrets2[4], this.arrets2[5], this.arrets2[6], this.arrets2[7], this.arrets2[8], this.arrets2[9]]};
 var trajet4 = {name: 'Trajet Antibes-Nice', arrets: [this.arrets2[9], this.arrets2[8], this.arrets2[7], this.arrets2[6], this.arrets2[5], this.arrets2[4], this.arrets2[3], this.arrets2[2], this.arrets2[1], this.arrets2[0]]};
 
-window.onload = (event) =>{
-
-    console.log(trajet1);
-    console.log(this.arrets2[1].name);
-
-};
 
 $(document).ready(function () {
     $("#type").change(function () {
@@ -173,7 +167,6 @@ onSuivant = function () {
     this.setArretSelected(document.getElementById("size").value);
 
     var dateTrajet = document.getElementById("date").value;
-    var heureTrajet = document.getElementById("heure").value;
 
     var trajet = eval("this."+this.getTrajetSelected());
     var arret = eval(this.getArretSelected());
@@ -209,7 +202,6 @@ onSuivant = function () {
 
         localStorage.setItem("lastArretName", lastArretName);
         localStorage.setItem("dateTrajet", dateTrajet);
-        localStorage.setItem("heureTrajet", heureTrajet);
     }
     else {
         localStorage.setItem("trajetName", "Non Defini");

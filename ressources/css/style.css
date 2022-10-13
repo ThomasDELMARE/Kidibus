@@ -2,11 +2,10 @@ ul.horizontal {
     list-style-type: none;
     overflow: hidden;
     background-color: rgba(0, 74, 173, 255);
-    padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 10px;
-    height: 125px;
+    height: 110px;
 }
 
 li {
@@ -40,7 +39,7 @@ a.imageItem {
 
 img {
     width: 125px;
-    height: 125px;
+    height: 110px;
 }
 
 body.background {
@@ -49,7 +48,7 @@ body.background {
 
 img.imageAccueil {
     width: 1000px;
-    height: 500px;
+    height: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -64,6 +63,27 @@ img.imageZou {
 
 img.imageEnvibus {
     width: 200px;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+img.imageAmadeus {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+img.imageEcole {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+img.imageMarineland {
+    width: 250px;
     height: 150px;
     margin-bottom: 20px;
     margin-top: 30px;
@@ -89,7 +109,7 @@ button {
     color: white;
     padding: 18px 60px;
     border-radius: 2px;
-    font-size: 22px;
+    font-size: 15px;
 }
 
 .fab {

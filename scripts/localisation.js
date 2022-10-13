@@ -35,7 +35,7 @@ window.onload = (event) =>{
     document.getElementById("trajet").textContent = trajet;
     document.getElementById("arretDepart").textContent = 'Votre arret de départ : ' + arret;
     document.getElementById("lastArretName").textContent = lastArretName;
-    document.getElementById("dateTrajet").textContent = "Date du départ: Le " + dateTrajet;
+    document.getElementById("dateTrajet").textContent = "Date de départ: Le " + dateTrajet;
     document.getElementById("heureTrajet").textContent = "à " + heureTrajet;
 };
 

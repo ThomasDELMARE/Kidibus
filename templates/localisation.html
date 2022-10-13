@@ -1,221 +1,214 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Information du trajet</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-VzLXTJGPSyTLX6d96AxgkKvE/LRb7ECGyTxuwtpjHnVWVZs2gp5RDjeM/tgBnVdM" crossorigin="anonymous" />
-
-    <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-RFZC58YeKApoNsIbBxf4z6JJXmh+geBSgkCQXFyh+4tiFSJmJBt+2FbjxW7Ar16M" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="../ressources/css/style.css">
-    <script src="../scripts/localisation.js" type="text/javascript"></script>
-    <script src="../scripts/maps/map.js" type="text/javascript"></script>
-
-</head>
+    <head>
+        <title>Information du trajet</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 
-<header style="background-color: rgba(0, 74, 173, 255); color: white;">
-    <ul class="horizontal">
-        <li>
-            <a class="imageItem" href="../index.html">
-                <img src="../ressources/img/kidibuslogo.png" />
-            </a>
-        </li>
-        <li><a class="listItemRight" href="../templates/contact.html">Nous contacter</a></li>
-        <li><a class="listItemRight" href="../templates/partenaires.html">Partenaires</a></li>
-        <li><a class="listItemRight" href="../templates/localisation.html">Localiser</a></li>
-        <li><a class="listItemRight" href="../templates/reservation.html">Réserver un trajet</a></li>
-    </ul>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-VzLXTJGPSyTLX6d96AxgkKvE/LRb7ECGyTxuwtpjHnVWVZs2gp5RDjeM/tgBnVdM" crossorigin="anonymous" />
 
-    <div class="d-flex justify-content-center">
-    <h1 class="mb-4">Information du trajet</h1>
-</div>
+        <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
 
-    <div class="container" id="headerDiv">
-        <br>
-        <div class="row">
-            <div class="col-2">
-                <div class="form-group">
-                    <img src="../ressources/img/kid.png" />
-                </div>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-RFZC58YeKApoNsIbBxf4z6JJXmh+geBSgkCQXFyh+4tiFSJmJBt+2FbjxW7Ar16M" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="../ressources/css/style.css">
+        <script src="../scripts/localisation.js" type="text/javascript"></script>
+        <script src="../scripts/maps/map.js" type="text/javascript"></script>
+
+    </head>
+
+
+    <header style="background-color: rgba(0, 74, 173, 255); color: white;">
+        <ul class="horizontal">
+            <li>
+                <a class="imageItem" href="../index.html">
+                    <img src="../ressources/img/kidibuslogo.png" />
+                </a>
+            </li>
+            <li><a class="listItemRight" href="../templates/contact.html">Nous contacter</a></li>
+            <li><a class="listItemRight" href="../templates/partenaires.html">Partenaires</a></li>
+            <li><a class="listItemRight" href="../templates/localisation.html">Localiser</a></li>
+            <li><a class="listItemRight" href="../templates/reservation.html">Réserver un trajet</a></li>
+        </ul>
+
+        
+    </header>
+
+
+    <body>
+        <div style="background-color:white;">
+            <div class="d-flex justify-content-center" >
+                <h1 class="mb-4">Informations du trajet</h1>
             </div>
-            <div class="col-6">
-                <div class="form-group">
-                    <h2 id="trajet"></h2>
-                    <div>                   Nom : MARTIN</div>
-                    <div>                Prénom : Henry Junior</div>       
+
+            <div class="container" id="headerDiv">
+            
+                <div class="row">
+                    <div class="col-2">
+                        <div class="form-group">
+                            <img src="../ressources/img/kid.png" />
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <h2 id="trajet"></h2>
+                            <div> Nom : MARTIN</div>
+                            <div> Prénom : Henry Junior</div>       
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div id="dateTrajet" style="font-size: 25px; margin-right:0px;"></div>
+                        <div id="heureTrajet" style="font-size: 25px;"></div>
+                        <div id="arretDepart" style="font-size: 25px;"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <h1>
+            <img id="idImage" class="runningBus" src="../ressources/img/runningBus.gif" />
+        </h1>
+        <div id="bodyDiv">
+                    <div id="map" style="width: 100%; height: 500px; border: 1px solid #AAA; padding: 6px 12px;"></div>
+            <div class="row align-items-center" style="margin-top:50px;">
+
+                <div class="col-12 ">
+                    <!-- Graphique de températures -->
+                    <div id="container1" class="tabcontent">
+                        <script type="text/javascript" src='../scripts/maps/charts.js'></script>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-
-    <div class="d-flex justify-content-center" id="dateTrajet" style="font-size: 20px;"></div>
-    <div class="d-flex justify-content-center" id="heureTrajet" style="font-size: 20px;"></div>
-    
-    <br>
-    <div class="d-flex justify-content-center" id="arretDepart" style="font-size: 25px;">
-    </div>
-</header>
 
 
-<body>
-
-    <h1>
-        <img id="idImage" class="runningBus" src="../ressources/img/runningBus.gif" />
-    </h1>
-    <div id="bodyDiv">
-                <div id="map" style="width: 100%; height: 500px; border: 1px solid #AAA; padding: 6px 12px;"></div>
-        <div class="row align-items-center" style="margin-top:50px;">
-
-            <div class="col-12 ">
-                <!-- Graphique de températures -->
-                <div id="container1" class="tabcontent">
-                    <script type="text/javascript" src='../scripts/maps/charts.js'></script>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Needed scripts -->
-    <script type='text/javascript' src='../scripts/maps/map.js'></script>
-
-</body>
-
-
-
-<footer style="background-color: rgba(0, 74, 173, 255);">
-    <br>
-
-    <div id="footerDiv">
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <button type="button" class="btn btn-light" onclick="openCloseForm()">
-                    <img src="../ressources/img/bus.png" width="200" height="200" />
-                </button>
-            </div>
-            <div class="col-6">
-                <div class="form-group">
-                    <br>
-                </div>
-                <div class="form-group">                                        
-                    <div class="popup" style="color: white;">   
-                       <h2>Informations du Bus </h2>                                        
-                       <div class="form-popup" id="popupForm">                                                                                     
-                           <div>                                                 
-                               <div> Numéro du bus : Bus N°4323 </div>                                                 
-                               <div> Dernier arrêt deservit par le bus : <h6 id="lastArretName"></h6></div>
-                               <br>                                                                                
-                           </div>                                         
-                       </div>                                       
-                   </div>
-               </div>
-            </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <div class="form-group">
-                    <button type="button" class="btn btn-light" onclick="openCloseConducteur()">
-                        <img src="../ressources/img/conducteur.png" width="200" height="200" />
+        <div id="footerDiv">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <button type="button" class="btn btn-light" onclick="openCloseForm()">
+                        <img src="../ressources/img/bus.png" width="200" height="200" />
                     </button>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="form-group">
-                    <br>
-                </div>
-                <div class="form-group">                                        
-                     <div class="popup" style="color: white;">   
-                        <h2>Informations du Conducteur de Bus </h2>                                        
-                        <div class="form-popup" id="popupConducteur">                                                                                     
+                <div class="col-6">
+                    <div class="form-group">
+                        <br>
+                    </div>
+                    <div class="form-group">                                        
+                        <div class="popup">   
+                        <h2>Informations du Bus </h2>                                        
+                        <div class="form-popup" id="popupForm">                                                                                     
                             <div>                                                 
-                                <div>                   Nom : KLEIN</div>
-                                <div>                Prénom : Jean</div>                                               
-                                <div>   Numéro de Teléphone : 06 23 45 64 24</div>
+                                <div> Numéro du bus : Bus N°4323 </div>                                                 
+                                <div> Dernier arrêt deservi : <span id="lastArretName"></span></div>
                                 <br>                                                                                
                             </div>                                         
                         </div>                                       
                     </div>
                 </div>
-            </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <button type="button" class="btn btn-light" onclick="openCloseAccompagnateur()">
-                    <img src="../ressources/img/parent.PNG" width="200" height="200" />
-                </button>
-            </div>
-            <div class="col-6">
-                <div class="form-group">
-                    <br>
                 </div>
-                <div class="form-group">                                        
-                    <div class="popup" style="color: white;">   
-                       <h2>Informations de l'accompagnateur </h2>                                        
-                       <div class="form-popup" id="popupAccompagnateur">                                                                                     
-                           <div>                                                 
-                               <div>                   Nom : MEUNIER</div>
-                               <div>                Prénom : Isabelle</div>                                               
-                               <div>   Numéro de Teléphone : 06 10 43 65 82</div>
-                               <br>                                                                                
-                           </div>                                         
-                       </div>                                       
-                   </div>
-               </div>
             </div>
         </div>
-      </div>
-    </div>
-      <button type="button" class="hide" data-toggle="modal" data-target="#modalDepart">
-      </button>
-      <button type="button" class="hide" data-toggle="modal" data-target="#modalArrivee">
-    </button>
-</footer>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-light" onclick="openCloseConducteur()">
+                            <img src="../ressources/img/conducteur.png" width="200" height="200" />
+                        </button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <br>
+                    </div>
+                    <div class="form-group">                                        
+                        <div class="popup">   
+                            <h2>Informations du Chauffeur de Bus </h2>                                        
+                            <div class="form-popup" id="popupConducteur">                                                                                     
+                                <div>                                                 
+                                    <div>Nom : KLEIN</div>
+                                    <div>Prénom : Jean</div>                                               
+                                    <div>Numéro de Teléphone : 06 23 45 64 24</div>
+                                    <br>                                                                                
+                                </div>                                         
+                            </div>                                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <button type="button" class="btn btn-light" onclick="openCloseAccompagnateur()">
+                        <img src="../ressources/img/parent.PNG" width="200" height="200" />
+                    </button>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <br>
+                    </div>
+                    <div class="form-group">                                        
+                        <div class="popup" >   
+                        <h2>Informations de l'accompagnateur </h2>                                        
+                        <div class="form-popup" id="popupAccompagnateur">                                                                                     
+                            <div>                                                 
+                                <div>Nom : MEUNIER</div>
+                                <div>Prénom : Isabelle</div>                                               
+                                <div>Numéro de Teléphone : 06 10 43 65 82</div>
+                                <br>                                                                                
+                            </div>                                         
+                        </div>                                       
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
 
-<!-- Modal Depart -->
-<div class="modal fade" id="modalDepart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body" style="font-size: 200%;">
-            Votre enfant a été pris en charge par le bus.
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="hideModalDepart()">OK !</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Modal Arrivee -->
-<div class="modal fade" id="modalArrivee" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body" style="font-size: 200%;">
-            Votre enfant est arrivé à desination !
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="hideModalArrivee()">OK !</button>
-        </div>
-      </div>
+        <!-- Modal Depart -->
+        <div class="modal fade" id="modalDepart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body" style="font-size: 150%;">
+                        Votre enfant a été pris en charge par le bus.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="hideModalDepart()">OK !</button>
+                    </div>
+                </div>
+            </div>
     </div>
-  </div>
 
+    <!-- Modal Arrivee -->
+        <div class="modal fade" id="modalArrivee" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body" style="font-size: 150%;">
+                        Votre enfant est arrivé à desination !
+                    </div>
+                
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="hideModalArrivee()">OK !</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- Needed scripts -->
+    <script type='text/javascript' src='../scripts/maps/map.js'></script>
+
+    </body>
 </html>
